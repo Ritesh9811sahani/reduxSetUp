@@ -1,12 +1,12 @@
 const initialState = {
-    userData: {},
+    chatData: [],
 
 };
 
 function UserReducer(state = initialState, action) {
     switch (action.type) {
-        case 'SET_USER_INFO':
-            return { ...state, userData: action.payload }
+        case 'SET_CHAT_INFO':
+            return { ...state, chatData: action.payload }
             break;
         default:
             return state;
