@@ -3,7 +3,7 @@ import { Text, View } from 'react-native';
 import MainNavigation from './src/mainNavigation/Route';
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
-import { store, persistor } from "./src/redux/ConfigurationStore";
+import { store, persistor } from './src/redux/Store';
 
 const App = () => {
   useEffect(() => {

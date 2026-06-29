@@ -3,7 +3,7 @@ import { View, Text, BackHandler, Platform } from 'react-native';
 import { useSelector, useDispatch } from "react-redux";
 
 const UserProfile=()=>{
-  const userData = useSelector((state) => state.userInfo.userData);
+  const userData = useSelector((state) => state.user.userDetails);
 console.log("userData:::::",userData);
 
     useEffect(() => {
@@ -11,7 +11,7 @@ console.log("userData:::::",userData);
 
     return (
         <View>
-            <Text>User Screen...</Text>
+            <Text>User Screen...,{userData.name}</Text>
         </View>
     )
 }
