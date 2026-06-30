@@ -1,11 +1,9 @@
-import React, { useEffect, useState, } from "react";
-import { View, Text, BackHandler, Platform } from 'react-native';
+import React, { useEffect } from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import SplashScreen from "../screen/splash/SplashScreen.js";
 import Home from "../screen/home/Home.js";
 import UserProfile from "../screen/profile/UserProfile.js";
-
-
 
 const Stack = createNativeStackNavigator();
 
@@ -15,7 +13,8 @@ function Route(props) {
 
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName={"Home"} screenOptions={{ headerShown: false }}>
+            <Stack.Navigator initialRouteName={"Splash"} screenOptions={{ headerShown: false }}>
+                <Stack.Screen name="Splash" component={SplashScreen} />
                 <Stack.Screen name="Home" component={Home} />
                 <Stack.Screen name="UserProfile" component={UserProfile} />
             </Stack.Navigator>
